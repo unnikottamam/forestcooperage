@@ -1,0 +1,156 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+img,
+button,
+button svg,
+a::before,
+a::after,
+a svg,
+a span,
+a strong {
+  @include transition;
+}
+
+a:focus {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+
+h1,
+h2 {
+  font-family: "minerva-modern", sans-serif;
+  font-weight: 400;
+}
+.ctalist {
+  list-style: none;
+  padding: 2.625rem 0 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0.4rem 0.85rem;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+.btn {
+  letter-spacing: 0.05rem;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$primary}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>")
+      center no-repeat;
+    background-size: contain;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .pb-5,
+  .py-5 {
+    padding-bottom: 5rem !important;
+  }
+
+  .pt-5,
+  .py-5 {
+    padding-top: 5rem !important;
+  }
+
+  .pb-6,
+  .py-6 {
+    padding-bottom: 6.25rem !important;
+  }
+
+  .pt-6,
+  .py-6 {
+    padding-top: 6.25rem !important;
+  }
+
+  .h1,
+  h1 {
+    font-size: $font-size-base * 3.75;
+  }
+  .h2,
+  h2 {
+    font-size: $font-size-base * 2.5;
+  }
+  h3,
+  .h3 {
+    font-size: $font-size-base * 1.875;
+  }
+  .h4,
+  h4 {
+    font-size: $font-size-base * 1.75;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    padding: 1.5rem 5.275rem 1.5rem 2.375rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pb-5,
+  .py-5 {
+    padding-bottom: 6.25rem !important;
+  }
+
+  .pt-5,
+  .py-5 {
+    padding-top: 6.25rem !important;
+  }
+
+  .pb-6,
+  .py-6 {
+    padding-bottom: 7rem !important;
+  }
+
+  .pt-6,
+  .py-6 {
+    padding-top: 7rem !important;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+  .h1,
+  h1 {
+    font-size: $font-size-base * 4.75;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 1.75rem 5.875rem 1.75rem 2.75rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .pb-6,
+  .py-6 {
+    padding-bottom: 8.5rem !important;
+  }
+
+  .pt-6,
+  .py-6 {
+    padding-top: 8.5rem !important;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
