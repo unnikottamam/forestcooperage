@@ -12,3 +12,61 @@
     }
   }
 }
+
+.sideimage {
+  position: relative;
+  overflow: hidden;
+  &__img {
+    position: relative;
+    padding: 0 0 4rem;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      margin-top: -1px;
+      background: $primary;
+      left: 0;
+    }
+    img {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      z-index: 3;
+      max-width: 65%;
+      width: 26rem;
+    }
+    &.right {
+      text-align: right;
+    }
+    &.left {
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .sideimage {
+    &__img {
+      position: absolute;
+      max-width: 38%;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0;
+      &:before {
+        display: none;
+      }
+      &.right {
+        right: 0;
+      }
+      &.left {
+        left: 0;
+      }
+      img {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+}

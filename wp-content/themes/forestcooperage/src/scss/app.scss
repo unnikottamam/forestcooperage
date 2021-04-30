@@ -15,7 +15,6 @@ $theme-colors: map-remove($theme-colors, "info");
 $utilities: map-merge(
   $utilities,
   (
-    "width": null,
     "position": null,
     "align": null,
     "user-select": null,
@@ -50,3 +49,4 @@ $utilities: map-merge(
 @import "./style";
 @import "./header";
 @import "./sections";
+@import "./footer";

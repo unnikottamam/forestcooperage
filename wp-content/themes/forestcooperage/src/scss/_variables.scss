@@ -4,6 +4,9 @@ $success: #616f3a;
 $danger: #f0585a;
 $dark: #042437;
 $light: #fbf7f1;
+$light_75: rgba($light, 0.75);
+$grey: #363637;
+$greydark: #2d2d2d;
 $black: #000000;
 $black_15: rgba($black, 0.15);
 
@@ -24,12 +27,12 @@ $font-size-base: 1rem;
 $font-size-sm: $font-size-base * 0.875;
 $font-family-sans-serif: "proxima-nova", sans-serif;
 $headings-font-weight: 500;
-$headings-color: $primary;
-$headings-margin-bottom: 1rem;
-$h1-font-size: $font-size-base * 2.65;
-$h2-font-size: $font-size-base * 2;
+$headings-margin-bottom: 1.25rem;
+$h1-font-size: $font-size-base * 4.75;
+$h2-font-size: $font-size-base * 4.75;
 $h3-font-size: $font-size-base * 1.5;
-$h4-font-size: $font-size-base * 1.25;
+$h4-font-size: $font-size-base * 1.625;
+$headings-line-height: 1;
 
 $btn-padding-y: 1.25rem;
 $btn-padding-x: 1.875rem;
@@ -45,14 +48,30 @@ $btn-border-radius-lg: 5rem;
 $btn-focus-width: 0;
 
 $link-color: inherit;
+$link-decoration: none;
 $link-hover-color: $primary;
 $link-hover-decoration: none;
 
-$input-border-color: $black_15;
-$input-border-radius: 5rem;
-$input-border-width: 1px;
-$input-padding-x: 1.5rem;
+$input-font-size: 1.25rem;
+$input-bg: transparent;
+$input-padding-y: 1.75rem;
+$input-padding-x: 2.25rem;
 $input-focus-box-shadow: none;
 $input-btn-focus-box-shadow: none;
-$input-focus-border-color: $primary;
 $input-height: 3.2rem;
+$input-border-radius: 0;
+$input-border-width: 0;
+$input-border-color: $light;
+$input-focus-color: $primary;
+$input-focus-border-color: $primary;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 1,
+  2: $spacer * 3,
+  3: $spacer * 6,
+  4: $spacer * 8,
+  5: $spacer * 12,
+  6: $spacer * 16
+);

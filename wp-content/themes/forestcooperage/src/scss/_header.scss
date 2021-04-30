@@ -1,0 +1,13 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  .container-fluid {
+    max-width: 106.25rem;
+  }
+  &__row {
+    height: 10.25rem;
+  }
+}
