@@ -10,4 +10,16 @@
   &__row {
     height: 10.25rem;
   }
+  &__logo {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(5rem + 12vw);
+    max-width: 14.5rem;
+  }
+  &__toggle {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(2.5rem + 4vw);
+    max-width: 5.625rem;
+  }
 }

@@ -75,6 +75,72 @@ h2 {
     border-bottom-width: 1px;
   }
 }
+.padd {
+  &__lg {
+    padding-top: calc(4rem + 10vw);
+    padding-bottom: calc(4rem + 10vw);
+  }
+}
+.button {
+  font-size: calc(0.85rem + 0.75vw);
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: $primary;
+  color: $light;
+  border: 2px solid $primary;
+  border-radius: 5rem;
+  letter-spacing: 0.05rem;
+  padding-top: calc(1rem + 0.8vw);
+  padding-bottom: calc(1rem + 0.8vw);
+  padding-left: calc(1.5rem + 1.5vw);
+  padding-right: calc(3.75rem + 2.5vw);
+  &:after {
+    content: "";
+    position: absolute;
+    right: 15%;
+    top: 56%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$light}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    color: $dark;
+    background-color: $light;
+    border-color: $light;
+    &:after {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$primary}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+    }
+  }
+  &-light {
+    color: $dark;
+    background-color: $light;
+    border-color: $light;
+    &:after {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$primary}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+    }
+    &:hover {
+      color: $light;
+      background-color: $primary;
+      border-color: $primary;
+      &:after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$light}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+      }
+    }
+  }
+  &-light {
+    background-color: $success;
+    border-color: $success;
+  }
+}
 
 @include media-breakpoint-up(md) {
   .btn {
@@ -99,5 +165,9 @@ h2 {
   p,
   li {
     font-size: 1.25rem;
+  }
+
+  .button {
+    padding: 1.75rem 5.875rem 1.75rem 2.75rem;
   }
 }
