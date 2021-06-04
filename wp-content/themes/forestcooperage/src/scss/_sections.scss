@@ -115,6 +115,44 @@
   }
 }
 
+.contactsec {
+  &__right {
+    position: relative;
+  }
+  &__form {
+    background: $grey;
+    position: relative;
+    border-radius: 1.5rem;
+    form {
+      padding: calc(1.25vw + 1.75rem) calc(4.5vw + 3rem) calc(2.75vw + 1.75rem);
+      border-radius: 1.5rem;
+      position: relative;
+    }
+    .form-control {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .button {
+      margin-top: 4rem;
+    }
+  }
+}
+.contactmap {
+  position: relative;
+  width: 100%;
+  height: calc(32vw + 10rem);
+  max-height: 100vh;
+  border-top: 2px solid $primary;
+  border-bottom: 2px solid $primary;
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .productlist {
   &__row {
     .productlist {
@@ -383,6 +421,15 @@
           z-index: 5;
           margin: 0;
         }
+      }
+    }
+  }
+
+  .contactsec {
+    &__form {
+      form {
+        padding: calc(1.25vw + 1.75rem) calc(3vw + 3rem) calc(2.75vw + 1.75rem)
+          calc(8vw + 3rem);
       }
     }
   }
