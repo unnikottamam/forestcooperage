@@ -31,7 +31,7 @@ get_header(); ?>
 </section>
 
 <section class="sideimage padd__lg">
-    <div class="sideimage__img right">
+    <div class="sideimage__img alignright">
         <img src="<?php echo get_template_directory_uri(); ?>/images/side-1.png" alt="bg">
     </div>
     <div class="container">
@@ -166,7 +166,7 @@ get_header(); ?>
 </section>
 
 <section class="sideimage padd__lg">
-    <div class="sideimage__img left">
+    <div class="sideimage__img alignleft">
         <img src="<?php echo get_template_directory_uri(); ?>/images/hot-tub.png" alt="bg">
     </div>
     <div class="container">

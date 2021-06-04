@@ -65,10 +65,10 @@
       max-width: 65%;
       width: 26rem;
     }
-    &.right {
+    &.alignright {
       text-align: right;
     }
-    &.left {
+    &.alignleft {
       text-align: left;
     }
   }
@@ -373,10 +373,10 @@
       &:before {
         display: none;
       }
-      &.right {
+      &.alignright {
         right: 0;
       }
-      &.left {
+      &.alignleft {
         left: 0;
       }
       img {
