@@ -23,7 +23,8 @@ button:focus {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "minerva-modern", sans-serif;
   font-weight: 400;
   color: $primary;
@@ -76,6 +77,12 @@ h2 {
   }
 }
 .padd {
+  &__lgt {
+    padding-top: calc(4rem + 10vw);
+  }
+  &__lgb {
+    padding-bottom: calc(4rem + 10vw);
+  }
   &__lg {
     padding-top: calc(4rem + 10vw);
     padding-bottom: calc(4rem + 10vw);
@@ -89,6 +96,9 @@ h2 {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-color: $primary;
   color: $light;
@@ -99,6 +109,7 @@ h2 {
   padding-bottom: calc(1rem + 0.8vw);
   padding-left: calc(1.5rem + 1.5vw);
   padding-right: calc(3.75rem + 2.5vw);
+  position: relative;
   &:after {
     content: "";
     position: absolute;
@@ -136,9 +147,62 @@ h2 {
       }
     }
   }
-  &-light {
+  &-white {
+    color: $dark;
+    background-color: $white;
+    border-color: $white;
+    &:after {
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$primary}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+    }
+    &:hover {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+      &:after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$white}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+      }
+    }
+  }
+  &-success {
     background-color: $success;
     border-color: $success;
+    &:hover {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+      &:after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$white}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+      }
+    }
+  }
+  &-black {
+    background-color: $brown;
+    border-color: $brown;
+    &:hover {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+      &:after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$white}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+      }
+    }
+  }
+}
+
+body {
+  position: relative;
+  &:before {
+    position: absolute;
+    height: calc(100% - 100vh);
+    width: 100%;
+    left: 0;
+    top: 100vh;
+    content: "";
+    z-index: -1;
+    background-image: url(../images/bg-circles.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
   }
 }
 

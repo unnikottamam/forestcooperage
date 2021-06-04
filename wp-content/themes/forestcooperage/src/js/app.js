@@ -3,3 +3,4 @@ window.$ = $;
 import Alert from "bootstrap/js/dist/alert";
 
 import "./main";
+import "slick-carousel";

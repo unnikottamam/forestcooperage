@@ -6,8 +6,29 @@
   padding: 5.625rem 0 2vw;
   position: relative;
   overflow: hidden;
+  z-index: 99;
+  border-top: 2px solid $primary;
   &:after {
+    z-index: 9;
     content: "";
+    width: 2px;
+    margin-left: -1px;
+    background: $white;
+    position: absolute;
+    left: 50%;
+    height: 5.625rem;
+    top: 0;
+  }
+  &:before {
+    z-index: 9;
+    content: "";
+    width: 2px;
+    margin-left: -1px;
+    background: $primary;
+    position: absolute;
+    left: 50%;
+    height: calc(3vw + 2rem);
+    top: calc(-3vw - 2rem);
   }
   &__logo {
     width: calc(2rem + 5vw);

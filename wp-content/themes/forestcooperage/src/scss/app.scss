@@ -43,6 +43,9 @@ $utilities: map-merge(
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 
+@import "~slick-carousel/slick/slick";
+@import "./slick";
+
 // Custom Styles
 @import "./misc";
 
