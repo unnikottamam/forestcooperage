@@ -55,9 +55,9 @@ $imgpos = get_field('image_position') ? get_field('image_position') : 'left';
                       $link_url
                     ); ?>" target="<?php echo esc_attr(
   $link_target
-); ?>" class="button button-<?php the_sub_field(
-  'type'
-); ?>"><?php echo esc_html($link_title); ?></a>
+); ?>" class="btton btton-<?php the_sub_field('type'); ?>"><?php echo esc_html(
+  $link_title
+); ?></a>
                 </li>
                 <?php
                     }

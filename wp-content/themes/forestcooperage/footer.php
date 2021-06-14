@@ -10,6 +10,41 @@
  */
 ?>
 
+<div class="instasec">
+    <div class="instasec__img">
+        <a href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/insta-1.jpg" alt="instagram">
+        </a>
+    </div>
+    <div class="instasec__img">
+        <a href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/insta-1.jpg" alt="instagram">
+        </a>
+    </div>
+    <div class="instasec__img">
+        <a href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/insta-1.jpg" alt="instagram">
+        </a>
+    </div>
+    <div class="instasec__img">
+        <a href="#">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/insta-1.jpg" alt="instagram">
+        </a>
+    </div>
+</div>
+<div class="instasec__cont">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 text-end">
+                <a href="#">@forestcooperage</a>
+            </div>
+            <div class="col-6">
+                <a href="#">#forestcooperage</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 <footer class="footer text-white">
     <div class="container text-center text-md-start">
         <div class="row justify-content-center">

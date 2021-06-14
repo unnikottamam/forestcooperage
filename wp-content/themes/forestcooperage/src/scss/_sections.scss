@@ -3,12 +3,16 @@
   &__img {
     position: absolute;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     top: 0;
     width: 100%;
     height: 100%;
     img {
       @include image_full;
+    }
+    + div {
+      position: relative;
+      z-index: 3;
     }
   }
 }
@@ -127,12 +131,20 @@
       padding: calc(1.25vw + 1.75rem) calc(4.5vw + 3rem) calc(2.75vw + 1.75rem);
       border-radius: 1.5rem;
       position: relative;
+      > p > br {
+        display: none;
+      }
     }
     .form-control {
       padding-left: 1rem;
       padding-right: 1rem;
     }
-    .button {
+    textarea {
+      &.form-control {
+        height: 7.2rem;
+      }
+    }
+    .btton {
       margin-top: 4rem;
     }
   }
@@ -280,6 +292,27 @@
     display: block;
     width: 100%;
   }
+  &__cont {
+    padding: 0.75rem 0;
+    position: relative;
+    &:before {
+      background: $primary;
+      height: 100%;
+      top: 0;
+      z-index: 9;
+      content: "";
+      width: 2px;
+      margin-left: -1px;
+      position: absolute;
+      left: 50%;
+    }
+    a {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0.25rem 0;
+      line-height: 1.3;
+    }
+  }
 }
 
 .faqsec {
@@ -358,6 +391,16 @@
     }
     :last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .instasec {
+    &__cont {
+      a {
+        font-size: 1.25rem;
+      }
     }
   }
 }

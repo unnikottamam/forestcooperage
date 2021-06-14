@@ -30,12 +30,12 @@
             <div class="row header__row align-items-center">
                 <div class="col-8">
                     <a href="<?php echo home_url(); ?>" class="header__logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/fc-logo.svg" alt="logo">
                     </a>
                 </div>
                 <div class="col-4 text-end">
                     <a href="<?php echo home_url(); ?>" class="header__toggle">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/menu.png" alt="menu">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg" alt="menu">
                     </a>
                 </div>
             </div>

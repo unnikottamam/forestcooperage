@@ -40,9 +40,9 @@ get_header(); ?>
         <div class="row justify-content-between text-center text-lg-start">
             <div class="col-lg-3 contactsec__left">
                 <ul class="ctalist d-lg-flex flex-column">
-                    <li><a class="button button-success d-lg-grid px-lg-0" href="#">Email us</a></li>
-                    <li><a class="button button-primary d-lg-grid px-lg-0" href="#">Call us</a></li>
-                    <li><a class="button button-black d-lg-grid px-lg-0" href="#">Visit us</a></li>
+                    <li><a class="btton btton-success d-lg-grid px-lg-0" href="#">Email us</a></li>
+                    <li><a class="btton btton-primary d-lg-grid px-lg-0" href="#">Call us</a></li>
+                    <li><a class="btton btton-black d-lg-grid px-lg-0" href="#">Visit us</a></li>
                 </ul>
             </div>
             <div class="col-lg-8 col-xl-7 contactsec__right">
@@ -55,7 +55,7 @@ get_header(); ?>
                         <input type="text" placeholder="Email address" class="form-control">
                         <input type="text" placeholder="Phone number" class="form-control">
                         <textarea placeholder="Message" class="form-control"></textarea>
-                        <button class="button button-primary">Send Message</button>
+                        <button class="btton btton-primary">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -81,8 +81,8 @@ get_header(); ?>
                     Forest Cooperage products to customers around the globe. Every one reflects a commitment to quality
                     that begins with the materials we use and the methods we apply.</p>
                 <ul class="ctalist">
-                    <li><a class="button" href="#">Our Roots</a></li>
-                    <li><a class="button button-white" href="#">Our Values</a></li>
+                    <li><a class="btton" href="#">Our Roots</a></li>
+                    <li><a class="btton btton-white" href="#">Our Values</a></li>
                 </ul>
             </div>
         </div>
@@ -127,3 +127,4 @@ if (have_posts()) {
   }
 }
 get_footer();
+

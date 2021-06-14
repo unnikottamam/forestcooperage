@@ -19,7 +19,7 @@ get_header(); ?>
                 <h1>Reviews</h1>
                 <p>See what our customers are saying about our products.</p>
                 <ul class="ctalist">
-                    <li><a class="button button-light" href="#">View Reviews</a></li>
+                    <li><a class="btton btton-light" href="#">View Reviews</a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +64,7 @@ get_header(); ?>
                 </div>
                 <div class="text-center">
                     <ul class="ctalist">
-                        <li><a class="button button-success" href="#">Load More</a></li>
+                        <li><a class="btton btton-success" href="#">Load More</a></li>
                     </ul>
                 </div>
             </div>
@@ -80,7 +80,7 @@ get_header(); ?>
                 <p>With their order, Forest Cooperage clients open a conversation with our owner and the craftsmen
                     working on their project, to ensure sound advice...</p>
                 <ul class="ctalist">
-                    <li><a class="button button-black" href="#">Leave A Review</a></li>
+                    <li><a class="btton btton-black" href="#">Leave A Review</a></li>
                 </ul>
             </div>
         </div>
@@ -125,3 +125,4 @@ if (have_posts()) {
   }
 }
 get_footer();
+

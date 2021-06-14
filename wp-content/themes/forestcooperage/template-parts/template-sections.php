@@ -23,7 +23,7 @@ get_header(); ?>
                     very few of them come to the skilled hands of our Forest Cooperage craftsmen where they are shown
                     the respect they deserve.</p>
                 <ul class="ctalist">
-                    <li><a class="button button-light" href="#">Our Products</a></li>
+                    <li><a class="btton btton-light" href="#">Our Products</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +43,7 @@ get_header(); ?>
                     part of our dedication to enriching the lives of our customers by bringing them into intimate
                     contact with nature.</p>
                 <ul class="ctalist">
-                    <li><a class="button button-success" href="#">Our Promise</a></li>
+                    <li><a class="btton btton-success" href="#">Our Promise</a></li>
                 </ul>
             </div>
         </div>
@@ -177,8 +177,8 @@ get_header(); ?>
                     Forest Cooperage products to customers around the globe. Every one reflects a commitment to quality
                     that begins with the materials we use and the methods we apply.</p>
                 <ul class="ctalist">
-                    <li><a class="button" href="#">Our Roots</a></li>
-                    <li><a class="button button-white" href="#">Our Values</a></li>
+                    <li><a class="btton" href="#">Our Roots</a></li>
+                    <li><a class="btton btton-white" href="#">Our Values</a></li>
                 </ul>
             </div>
         </div>
@@ -200,3 +200,4 @@ if (have_posts()) {
   }
 }
 get_footer();
+

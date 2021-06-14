@@ -38,7 +38,7 @@ get_header(); ?>
                     tubs in the traditional cooperage style of construction; a method that has been utilized for
                     hundreds of years in creating wine vats, water cisterns, and barrels.</p>
                 <ul class="ctalist">
-                    <li><a class="button button-primary" href="#">Our Products</a></li>
+                    <li><a class="btton btton-primary" href="#">Our Products</a></li>
                 </ul>
             </div>
         </div>
@@ -134,7 +134,7 @@ get_header(); ?>
                     and enhancing skin tone. Choose electric or wood-fired heating. A Forest Cooperage cedar hot tub
                     will increase the appearance and value of your home. </p>
                 <ul class="ctalist">
-                    <li><a class="button button-white" href="#">See Reviews</a></li>
+                    <li><a class="btton btton-white" href="#">See Reviews</a></li>
                 </ul>
             </div>
         </div>
@@ -156,8 +156,8 @@ get_header(); ?>
                     elit. Morbi malesuada volutpat lacus, id posuere justo commodo sed. Donec rutrum nec arcu sit amet
                     ultrices. Nam pretium cursus commodo. </p>
                 <ul class="ctalist">
-                    <li><a class="button button-primary" href="#">Start Building</a></li>
-                    <li><a class="button button-white" href="#">Products</a></li>
+                    <li><a class="btton btton-primary" href="#">Start Building</a></li>
+                    <li><a class="btton btton-white" href="#">Products</a></li>
                 </ul>
             </div>
         </div>
@@ -202,3 +202,4 @@ if (have_posts()) {
   }
 }
 get_footer();
+

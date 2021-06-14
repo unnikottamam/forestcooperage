@@ -1,6 +1,6 @@
 <?php
 /**
- * Content Area Block Template.
+ * Contact Area Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -8,17 +8,16 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$id = 'content-area-' . $block['id'];
+$id = 'contact-area-' . $block['id'];
 if (!empty($block['anchor'])) {
   $id = $block['anchor'];
 }
-$className = 'contentarea';
+$className = 'contactsec';
 $textalign = get_field('text_align') ? get_field('text_align') : 'center';
 $className .= ' text-' . $textalign;
 if (!empty($block['className'])) {
   $className .= ' ' . $block['className'];
 }
-$blocksize = get_field('block_size');
 ?>
 
 <section id="<?php echo esc_attr($id); ?>" class="coverbg <?php echo esc_attr(
@@ -32,12 +31,15 @@ $blocksize = get_field('block_size');
         } ?>
     </div>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7 col-xl-6 <?php echo $blocksize; ?>">
-                <?php
-                the_field('contents');
-                if (have_rows('buttons')) {
-                  echo '<ul class="ctalist">';
+        <div class="row">
+            <div class="col-lg-7 col-xl-6 text-center text-lg-start">
+                <?php the_field('contents'); ?>
+            </div>
+        </div>
+        <div class="row justify-content-between text-center text-lg-start">
+            <div class="col-lg-3 contactsec__left">
+                <?php if (have_rows('buttons')) {
+                  echo '<ul class="ctalist d-lg-flex flex-column">';
                   while (have_rows('buttons')) {
                     the_row();
                     if (get_sub_field('link')) {
@@ -54,16 +56,25 @@ $blocksize = get_field('block_size');
                       $link_url
                     ); ?>" target="<?php echo esc_attr(
   $link_target
-); ?>" class="btton btton-<?php the_sub_field('type'); ?>"><?php echo esc_html(
-  $link_title
-); ?></a>
+); ?>" class="btton d-lg-grid px-lg-0 btton-<?php the_sub_field(
+  'type'
+); ?>"><?php echo esc_html($link_title); ?></a>
                 </li>
                 <?php
                     }
                   }
                   echo '</ul>';
-                }
-                ?>
+                } ?>
+            </div>
+            <div class="col-lg-8 col-xl-7 contactsec__right">
+                <div class="text-lg-end text-center">
+                    <p><em>Send us a message, we’re on standby.</em></p>
+                </div>
+                <div class="contactsec__form text-white">
+                    <?php echo do_shortcode(
+                      '[contact-form-7 id="131" title="Contact form"]'
+                    ); ?>
+                </div>
             </div>
         </div>
     </div>

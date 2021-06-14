@@ -30,7 +30,7 @@ get_header(); ?>
                 <p>With their order, Forest Cooperage clients open a conversation with our owner and the craftsmen
                     working on their project, to ensure sound advice and assurance that specific needs are met. </p>
                 <ul class="ctalist">
-                    <li><a class="button button-success" href="#">Contact Us</a></li>
+                    <li><a class="btton btton-success" href="#">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -152,7 +152,7 @@ get_header(); ?>
                     Fo rest Cooperage products to customers around the globe. Every one reflects a commitment to quality
                     that begins with the materials we use and the methods we apply.</p>
                 <ul class="ctalist">
-                    <li><a class="button button-black" href="#">Build Yours Today</a></li>
+                    <li><a class="btton btton-black" href="#">Build Yours Today</a></li>
                 </ul>
             </div>
         </div>
@@ -197,3 +197,4 @@ if (have_posts()) {
   }
 }
 get_footer();
+
