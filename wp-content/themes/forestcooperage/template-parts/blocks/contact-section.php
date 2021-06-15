@@ -23,9 +23,11 @@ if (!empty($block['className'])) {
 <section id="<?php echo esc_attr($id); ?>" class="coverbg <?php echo esc_attr(
   $className
 ); ?> padd__lg text-<?php the_field('color'); ?>">
-    <div class="coverbg__img" <?php echo get_field('bg_image')
-      ? 'style="background-color: ' . get_field('bg_color') . ';"'
-      : ''; ?>>
+    <div class="coverbg__img <?php echo get_field('bg_image')
+      ? 'hasbg'
+      : ''; ?>" <?php echo get_field('bg_color')
+  ? 'style="background-color: ' . get_field('bg_color') . ';"'
+  : ''; ?>>
         <?php if (get_field('bg_image')) {
           echo wp_get_attachment_image(get_field('bg_image')['id'], 'full');
         } ?>

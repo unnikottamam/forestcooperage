@@ -11,7 +11,7 @@ $(document).ready(function () {
     fade: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    dots: true
+    dots: true,
   });
 
   $(".productlist__item").on("click", function (e) {
@@ -19,6 +19,13 @@ $(document).ready(function () {
     if ($(this).hasClass("active")) {
       $(".productlist__item").removeClass("active");
     } else {
+      $(".productlist__item").removeClass("active");
+      $(this).addClass("active");
+    }
+  });
+  $(".productlist__item").on("mouseenter", function (e) {
+    e.preventDefault();
+    if (!$(this).hasClass("active")) {
       $(".productlist__item").removeClass("active");
       $(this).addClass("active");
     }

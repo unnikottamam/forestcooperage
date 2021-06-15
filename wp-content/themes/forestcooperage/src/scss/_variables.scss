@@ -9,9 +9,14 @@ $light_75: rgba($light, 0.75);
 $grey: #363637;
 $greydark: #2d2d2d;
 $brown: #333333;
+$white: #fff;
+$white_8: rgba($white, 0.08);
 $black: #000000;
+$black_75: rgba($black, 0.75);
+$black_50: rgba($black, 0.5);
 $black_25: rgba($black, 0.25);
 $black_15: rgba($black, 0.15);
+$black_10: rgba($black, 0.1);
 
 $theme-colors: (
   "primary": $primary,
@@ -19,10 +24,10 @@ $theme-colors: (
   "success": $success,
   "danger": $danger,
   "dark": $dark,
-  "light": $light
+  "light": $light,
 );
 $custom-colors: (
-  "black": $black
+  "black": $black,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
@@ -76,5 +81,5 @@ $spacers: (
   3: $spacer * 6,
   4: $spacer * 8,
   5: $spacer * 12,
-  6: $spacer * 16
+  6: $spacer * 16,
 );

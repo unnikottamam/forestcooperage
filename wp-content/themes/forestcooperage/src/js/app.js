@@ -1,6 +1,7 @@
 window.jQuery = $;
 window.$ = $;
-import Alert from "bootstrap/js/dist/alert";
+
+import "@fancyapps/fancybox/dist/jquery.fancybox.min.js";
+import "slick-carousel";
 
 import "./main";
-import "slick-carousel";

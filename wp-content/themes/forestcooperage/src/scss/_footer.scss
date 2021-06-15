@@ -44,6 +44,46 @@
       margin-bottom: calc(1rem + 2vw);
     }
   }
+  &__testi {
+    position: relative;
+    padding: calc(2rem + 3.75vw) 0;
+    margin-bottom: 1px;
+  }
+  &__testiside {
+    position: absolute;
+    width: calc(9vw + 4rem);
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: $grey;
+    max-width: 12rem;
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 2px;
+      width: 40%;
+      background: $primary;
+      left: 0;
+    }
+    &:before {
+      left: -40%;
+      background: $white;
+    }
+  }
+  &__testiimg {
+    padding: 2rem 0 0;
+    img {
+      display: block;
+      margin: 0 auto 1.25rem;
+      width: 7rem;
+      border-radius: 50%;
+    }
+    h4 {
+      margin: 0;
+    }
+  }
 }
 
 .copyright {

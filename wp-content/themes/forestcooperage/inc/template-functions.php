@@ -57,6 +57,7 @@ function change_menu_classes($css_classes)
 add_filter('nav_menu_css_class', 'change_menu_classes');
 
 add_image_size('review-size', 180, 180, true);
+add_image_size('gallery-size', 564, 400, true);
 // update_option('large_size_w', 460);
 // update_option('large_size_h', 460);
 // update_option('large_crop', 1);

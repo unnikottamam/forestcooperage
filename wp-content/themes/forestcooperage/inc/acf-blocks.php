@@ -60,6 +60,36 @@ function my_acf_init_block_types()
     ]);
 
     acf_register_block_type([
+      'name' => 'twocol-section',
+      'title' => __('Two Column Content'),
+      'description' => __('Two Column Content block.'),
+      'render_template' => 'template-parts/blocks/twocol-section.php',
+      'category' => 'layout ',
+      'icon' => 'edit-page',
+      'keywords' => ['twocol-section'],
+    ]);
+
+    acf_register_block_type([
+      'name' => 'media-section',
+      'title' => __('Media Section'),
+      'description' => __('Media Section block.'),
+      'render_template' => 'template-parts/blocks/media-section.php',
+      'category' => 'layout ',
+      'icon' => 'edit-page',
+      'keywords' => ['media-section'],
+    ]);
+
+    acf_register_block_type([
+      'name' => 'product-list',
+      'title' => __('Product List Area'),
+      'description' => __('Product List Area block.'),
+      'render_template' => 'template-parts/blocks/product-list.php',
+      'category' => 'layout ',
+      'icon' => 'edit-page',
+      'keywords' => ['product-list'],
+    ]);
+
+    acf_register_block_type([
       'name' => 'faq-section',
       'title' => __('FAQ Area'),
       'description' => __('FAQ Area block.'),
@@ -77,6 +107,16 @@ function my_acf_init_block_types()
       'category' => 'layout ',
       'icon' => 'edit-page',
       'keywords' => ['review-section'],
+    ]);
+
+    acf_register_block_type([
+      'name' => 'gallery-section',
+      'title' => __('Gallery Section'),
+      'description' => __('Gallery Section block.'),
+      'render_template' => 'template-parts/blocks/gallery-section.php',
+      'category' => 'layout ',
+      'icon' => 'edit-page',
+      'keywords' => ['gallery-section'],
     ]);
 
     acf_register_block_type([
@@ -101,8 +141,8 @@ function my_acf_init_block_types()
 
     acf_register_block_type([
       'name' => 'product-section',
-      'title' => __('Product List'),
-      'description' => __('Product List block.'),
+      'title' => __('Product Section'),
+      'description' => __('Product Section block.'),
       'render_template' => 'template-parts/blocks/product-section.php',
       'category' => 'layout ',
       'icon' => 'edit-page',

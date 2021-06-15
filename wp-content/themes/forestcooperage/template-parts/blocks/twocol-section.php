@@ -1,6 +1,6 @@
 <?php
 /**
- * Banner Block Template.
+ * Two Column Content Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -8,36 +8,40 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$id = 'banner-' . $block['id'];
+$id = 'content-area-' . $block['id'];
 if (!empty($block['anchor'])) {
   $id = $block['anchor'];
 }
-$className = 'coverbg banner';
+$className = 'contentarea';
+$textalign = get_field('text_align') ? get_field('text_align') : 'center';
+$className .= ' text-' . $textalign;
 if (!empty($block['className'])) {
   $className .= ' ' . $block['className'];
 }
-if (!empty($block['align'])) {
-  $className .= ' align' . $block['align'];
-}
 ?>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr(
+
+<section id="<?php echo esc_attr($id); ?>" class="coverbg <?php echo esc_attr(
   $className
-); ?> text-<?php the_field('color'); ?> <?php the_field('class'); ?>">
+); ?> padd__lg text-<?php the_field('color'); ?>">
     <div class="coverbg__img <?php echo get_field('bg_image')
       ? 'hasbg'
-      : ''; ?>">
+      : ''; ?>" <?php echo get_field('bg_color')
+  ? 'style="background-color: ' . get_field('bg_color') . ';"'
+  : ''; ?>>
         <?php if (get_field('bg_image')) {
           echo wp_get_attachment_image(get_field('bg_image')['id'], 'full');
         } ?>
     </div>
     <div class="container">
-        <div class="row justify-content-center align-items-center padd__lg min-vh-100">
-            <div class="col-lg-8 col-md-10 text-<?php the_field(
-              'text_align'
-            ); ?>">
-                <?php
-                the_field('contents');
-                if (have_rows('buttons')) {
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <?php the_field('contents_one'); ?>
+            </div>
+            <div class="col-lg-6">
+                <?php the_field('contents_two'); ?>
+            </div>
+            <div class="col-lg-7 col-xl-6 text-center">
+                <?php if (have_rows('buttons')) {
                   echo '<ul class="ctalist">';
                   while (have_rows('buttons')) {
                     the_row();
@@ -63,8 +67,7 @@ if (!empty($block['align'])) {
                     }
                   }
                   echo '</ul>';
-                }
-                ?>
+                } ?>
             </div>
         </div>
     </div>

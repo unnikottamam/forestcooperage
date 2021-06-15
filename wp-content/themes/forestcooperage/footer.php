@@ -8,8 +8,31 @@
  *
  * @package forestcooperage
  */
-?>
 
+$testi = get_field('footer_testimonials', 'options');
+if ($testi) {
+  shuffle($testi); ?>
+<div class="footer__testi bg-success text-white text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 col-11">
+                <h3><?php echo $testi[0]['title']; ?></h3>
+                <p><?php echo $testi[0]['description']; ?></p>
+                <div class="footer__testiimg">
+                    <?php echo wp_get_attachment_image(
+                      $testi[0]['image']['id'],
+                      'thumbnail'
+                    ); ?>
+                    <h4><?php echo $testi[0]['name']; ?></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__testiside d-none d-lg-block"></div>
+</div>
+<?php
+}
+?>
 <div class="instasec">
     <div class="instasec__img">
         <a href="#">
@@ -54,61 +77,23 @@
                 </a>
             </div>
             <div class="col-lg-8 col-md-10 text-center footer__widget">
-                <h2>Nature. Forever.</h2>
-                <p>Our dedication to conserving wild lands and wildlife while protecting forest workers and their
-                    communities drives everything we do.Subscribe to our newsletter for company information, processes
-                    and new product releases.</p>
+                <?php the_field('footer_widget_1', 'options'); ?>
             </div>
             <div class="col-12 footer__widget">
                 <div class="footer__form">
-                    <form>
-                        <div class="row align-items-end">
-                            <div class="col-md-8 col-xl-9 pb-2 pb-md-0">
-                                <div class="row">
-                                    <div class="col-md-6 px-lg-1">
-                                        <input type="text" placeholder="Full name" class="form-control">
-                                    </div>
-                                    <div class="col-md-6 px-lg-1">
-                                        <input type="email" placeholder="Email address" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xl-3 px-lg-1">
-                                <button class="btn btn-block btn-light w-100">Subscribe</button>
-                            </div>
-                        </div>
-                    </form>
+                    <?php echo do_shortcode(
+                      '[contact-form-7 id="248" title="Footer form"]'
+                    ); ?>
                 </div>
             </div>
             <div class="col-md-4">
-                <ul class="footer__menu">
-                    <li><a href="#">01 Products</a></li>
-                    <li><a href="#">02 Heating</a></li>
-                    <li><a href="#">03 Pricing</a></li>
-                    <li><a href="#">04 FAQs </a></li>
-                </ul>
+                <?php the_field('footer_widget_2', 'options'); ?>
             </div>
             <div class="col-md-4 footer__widget">
-                <ul class="footer__menu">
-                    <li><a href="#">05 Resources</a></li>
-                    <li><a href="#">06 Blog</a></li>
-                    <li><a href="#">07 Reviews</a></li>
-                    <li><a href="#">08 Company</a></li>
-                </ul>
+                <?php the_field('footer_widget_3', 'options'); ?>
             </div>
             <div class="col-md-4 footer__widget">
-                <ul>
-                    <li><strong>Forest Cooperage Inc.</strong></li>
-                    <li>
-                        2810 Ramsden Rd, Sooke BC Canada<br>
-                        Phone: <a href="tel:1-877-557-1961">1-877-557-1961</a><br>
-                        Email: <a href="mailto:sales@forestcooperage.com">sales@forestcooperage.com</a>
-                    </li>
-                    <li>
-                        <a href="#">Instagram @forestcooperage</a><br>
-                        <a href="#">Facebook @forestcooperage</a>
-                    </li>
-                </ul>
+                <?php the_field('footer_widget_4', 'options'); ?>
             </div>
         </div>
     </div>
@@ -117,9 +102,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <p>Copyright 2020 Forest Cooperage Inc <span>|</span> All content is own by Forest Cooperage and may not
+                <p>Copyright <?php echo date(
+                  'Y'
+                ); ?> Forest Cooperage Inc <span>|</span> All content is own by Forest Cooperage and may not
                     be
-                    reproduced beyond <span>|</span> <a target="_blank" href="#">Crafted by FOE</a></p>
+                    reproduced beyond <span>|</span> <a target="_blank" href="https://foecreative.com/">Crafted by
+                        FOE</a></p>
             </div>
         </div>
     </div>

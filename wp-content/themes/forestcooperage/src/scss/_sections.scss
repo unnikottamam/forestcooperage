@@ -14,6 +14,18 @@
       position: relative;
       z-index: 3;
     }
+    &.hasbg {
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: $black;
+        opacity: 0.65;
+      }
+    }
   }
 }
 
@@ -392,6 +404,96 @@
     :last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.gallerysec {
+  padding: calc(2vw + 2rem) 0;
+  &__item {
+    padding: 0.75rem;
+    a {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      img {
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: $black_50;
+        opacity: 0;
+        z-index: 3;
+      }
+      &:hover {
+        img {
+          transform: scale(1.15);
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.mediasec {
+  &__item {
+    a {
+      border-bottom: 1px solid $gray__light;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+      max-width: 88%;
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+    h3 {
+      position: relative;
+      margin: 0;
+      padding: 1.75rem 3rem 1.75rem 0;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 2.5rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        background-image: url(../../images/download.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.productlists {
+  padding: 1rem 0;
+  &__item {
+    padding: 2rem 0.75rem;
+  }
+  a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.15rem;
+    text-transform: capitalize;
+  }
+  img {
+    display: block;
+    margin: 0 auto 1.5rem;
+    height: 7rem;
+    width: auto;
   }
 }
 

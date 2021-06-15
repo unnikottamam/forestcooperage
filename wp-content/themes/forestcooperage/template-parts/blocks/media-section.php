@@ -1,6 +1,6 @@
 <?php
 /**
- * Faq Area Block Template.
+ * Media Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -8,20 +8,20 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$id = 'faq-area-' . $block['id'];
+$id = 'content-area-' . $block['id'];
 if (!empty($block['anchor'])) {
   $id = $block['anchor'];
 }
-$className = 'faqsec';
+$className = 'mediasec coverbg';
 if (!empty($block['className'])) {
   $className .= ' ' . $block['className'];
 }
-$faq_size = get_field('faq_size') ? get_field('faq_size') : 'full';
+$media_size = get_field('media_size') ? get_field('media_size') : 'full';
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="coverbg <?php echo esc_attr(
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr(
   $className
-); ?> padd__0 text-<?php the_field('color'); ?>">
+); ?> padd__lg text-<?php the_field('color'); ?>">
     <div class="coverbg__img <?php echo get_field('bg_image')
       ? 'hasbg'
       : ''; ?>" <?php echo get_field('bg_color')
@@ -32,27 +32,26 @@ $faq_size = get_field('faq_size') ? get_field('faq_size') : 'full';
         } ?>
     </div>
     <div class="container">
-        <div class="row justify-content-center faqsec__row">
-            <?php if (have_rows('faqs')) {
-              $count = 0;
-              while (have_rows('faqs')) {
-
-                $count++;
+        <div class="row justify-content-center">
+            <?php if (have_rows('media_items')) {
+              while (have_rows('media_items')) {
                 the_row();
-                ?>
-            <div class="col-lg-<?php echo $faq_size == 'half'
+                if (get_sub_field('file')) {
+
+                  $file = get_sub_field('file');
+                  $file_url = $file['url'];
+                  ?>
+            <div class="col-lg-<?php echo $media_size == 'half'
               ? '6'
-              : '12'; ?> faqsec__item <?php if ($count == 1) {
+              : '12'; ?> mediasec__item <?php if ($count == 1) {
    echo 'active';
  } ?>">
-                <div class="faqsec__inn">
+                <a target="_blank" href="<?php echo $file_url; ?>">
                     <h3><?php the_sub_field('title'); ?></h3>
-                    <div class="faqsec__cont">
-                        <p><?php the_sub_field('contents'); ?></p>
-                    </div>
-                </div>
+                </a>
             </div>
             <?php
+                }
               }
             } ?>
         </div>

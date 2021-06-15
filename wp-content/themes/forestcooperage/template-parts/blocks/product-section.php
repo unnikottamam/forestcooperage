@@ -1,6 +1,6 @@
 <?php
 /**
- * Product List Block Template.
+ * Product Block Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -8,11 +8,11 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
-$id = 'content-area-' . $block['id'];
+$id = 'products-area-' . $block['id'];
 if (!empty($block['anchor'])) {
   $id = $block['anchor'];
 }
-$className = 'contentarea';
+$className = 'productsarea';
 $textalign = get_field('text_align') ? get_field('text_align') : 'center';
 $className .= ' text-' . $textalign;
 if (!empty($block['className'])) {
@@ -22,10 +22,12 @@ if (!empty($block['className'])) {
 
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr(
   $className
-); ?> coverbg text-white padd__lg text-<?php the_field('color'); ?>">
-    <div class="coverbg__img" <?php echo get_field('bg_image')
-      ? 'style="background-color: ' . get_field('bg_color') . ';"'
-      : ''; ?>>
+); ?> coverbg padd__lg text-<?php the_field('color'); ?>">
+    <div class="coverbg__img <?php echo get_field('bg_image')
+      ? 'hasbg'
+      : ''; ?>" <?php echo get_field('bg_color')
+  ? 'style="background-color: ' . get_field('bg_color') . ';"'
+  : ''; ?>>
         <?php if (get_field('bg_image')) {
           echo wp_get_attachment_image(get_field('bg_image')['id'], 'full');
         } ?>
