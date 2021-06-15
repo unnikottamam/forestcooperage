@@ -36,7 +36,7 @@ if (!empty($block['className'])) {
                 <?php if (have_rows('reviews')) {
                   while (have_rows('reviews')) {
                     the_row(); ?>
-                <div class="reviewsec__item">
+                <div data-aos="fade-up" class="reviewsec__item">
                     <?php if (get_sub_field('image')) {
                       echo wp_get_attachment_image(
                         get_sub_field('image')['id'],
@@ -66,7 +66,7 @@ if (!empty($block['className'])) {
                             ? $link['target']
                             : '_self';
                           ?>
-                    <li>
+                    <li data-aos="fade-up">
                         <a href="<?php echo esc_url(
                           $link_url
                         ); ?>" target="<?php echo esc_attr(

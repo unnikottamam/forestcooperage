@@ -18,12 +18,24 @@ $className .= ' text-' . $textalign;
 if (!empty($block['className'])) {
   $className .= ' ' . $block['className'];
 }
+$padd_class = get_post_type() == 'post' ? ' padd__md' : ' padd__lg';
 $blocksize = get_field('block_size');
+switch ($blocksize) {
+  case 'full':
+    $boxclass = 'col-12';
+    break;
+
+  default:
+    $boxclass = 'col-lg-7 col-xl-6';
+    break;
+}
+$boxclass .= ' ' . $blocksize;
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="coverbg <?php echo esc_attr(
-  $className
-); ?> padd__lg text-<?php the_field('color'); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="coverbg <?php
+echo esc_attr($className);
+echo $padd_class;
+?> text-<?php the_field('color'); ?>">
     <div class="coverbg__img <?php echo get_field('bg_image')
       ? 'hasbg'
       : ''; ?>" <?php echo get_field('bg_color')
@@ -35,7 +47,7 @@ $blocksize = get_field('block_size');
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-7 col-xl-6 <?php echo $blocksize; ?>">
+            <div class="<?php echo $boxclass; ?>">
                 <?php
                 the_field('contents');
                 if (have_rows('buttons')) {

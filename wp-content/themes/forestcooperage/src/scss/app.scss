@@ -46,6 +46,7 @@ $utilities: map-merge(
 // Plugins
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 @import "~slick-carousel/slick/slick";
+@import "~aos/dist/aos.css";
 @import "./slick";
 
 // Custom Styles
@@ -54,4 +55,5 @@ $utilities: map-merge(
 @import "./style";
 @import "./header";
 @import "./sections";
+@import "./blog";
 @import "./footer";

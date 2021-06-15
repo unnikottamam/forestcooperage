@@ -1,0 +1,135 @@
+.blog {
+  &__main {
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  &__social {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.75rem;
+      color: $success;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      display: inline-block;
+      margin-right: 0.65rem;
+      vertical-align: top;
+      &:hover {
+        svg {
+          fill: $success;
+        }
+      }
+    }
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $primary;
+    }
+  }
+}
+
+img {
+  &[class*="align"] {
+    box-shadow: 0 0 1rem 0 $black_15;
+    margin-bottom: 1rem;
+    height: auto;
+  }
+  .alignleft {
+    float: left;
+    margin-right: 1.5rem;
+    max-width: 46%;
+  }
+  &.alignright {
+    float: right;
+    margin-left: 1.5rem;
+    max-width: 46%;
+  }
+  &.alignnone,
+  &.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+.nav-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-previous .btton {
+  transform: rotate(180deg);
+  span {
+    transition: none;
+    transform: rotate(180deg);
+    display: block;
+  }
+}
+
+.post {
+  &__thumb {
+    > a {
+      display: block;
+      position: relative;
+      &:hover {
+        .post__thumbimg {
+          img {
+            transform: scale(1.15);
+          }
+        }
+      }
+    }
+  }
+  &__thumbimg {
+    box-shadow: 0 0 1rem 0 $black_15;
+    overflow: hidden;
+    margin: 1rem -0.75rem;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .post {
+    &__thumb {
+      &.odd {
+        .post__thumbimg {
+          right: 0;
+        }
+        .post__thumbcont {
+          padding-right: 4vw;
+        }
+      }
+      &.even {
+        .post__thumbimg {
+          left: 0;
+        }
+        .post__thumbcont {
+          padding-left: 4vw;
+        }
+      }
+    }
+    &__thumbimg {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      margin: 0;
+      height: 100%;
+      img {
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+  }
+}

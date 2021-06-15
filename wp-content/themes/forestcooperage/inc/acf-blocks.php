@@ -20,6 +20,16 @@ function my_acf_init_block_types()
     ]);
 
     acf_register_block_type([
+      'name' => 'image-block',
+      'title' => __('Image Block'),
+      'description' => __('Image block.'),
+      'render_template' => 'template-parts/blocks/image-block.php',
+      'category' => 'layout ',
+      'icon' => 'format-image',
+      'keywords' => ['image-block'],
+    ]);
+
+    acf_register_block_type([
       'name' => 'side-image-content',
       'title' => __('Side Image + Content'),
       'description' => __('Side image + content block.'),

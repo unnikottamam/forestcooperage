@@ -32,7 +32,7 @@ if (!empty($block['align'])) {
     </div>
     <div class="container">
         <div class="row justify-content-center align-items-center padd__lg min-vh-100">
-            <div class="col-lg-8 col-md-10 text-<?php the_field(
+            <div data-aos="fade-up" class="col-lg-8 col-md-10 text-<?php the_field(
               'text_align'
             ); ?>">
                 <?php
@@ -50,7 +50,7 @@ if (!empty($block['align'])) {
                         ? $link['target']
                         : '_self';
                       ?>
-                <li>
+                <li data-aos="fade-up">
                     <a href="<?php echo esc_url(
                       $link_url
                     ); ?>" target="<?php echo esc_attr(

@@ -26,15 +26,17 @@ $imgpos = get_field('image_position') ? get_field('image_position') : 'left';
   $className
 ); ?> text-<?php the_field('color'); ?> padd__lg">
     <div class="sideimage__img align<?php echo $imgpos; ?>">
-        <?php if (get_field('image')) {
-          echo wp_get_attachment_image(get_field('image')['id'], 'full');
-        } ?>
+        <div data-aos="fade-left">
+            <?php if (get_field('image')) {
+              echo wp_get_attachment_image(get_field('image')['id'], 'full');
+            } ?>
+        </div>
     </div>
     <div class="container">
         <div class="row justify-content-lg-<?php echo $imgpos == 'right'
           ? 'start'
           : 'end'; ?>">
-            <div class="col-lg-7 text-center text-lg-start">
+            <div data-aos="fade-right" class="col-lg-7 text-center text-lg-start">
                 <?php
                 the_field('contents');
                 if (have_rows('buttons')) {
@@ -50,7 +52,7 @@ $imgpos = get_field('image_position') ? get_field('image_position') : 'left';
                         ? $link['target']
                         : '_self';
                       ?>
-                <li>
+                <li data-aos="fade-up">
                     <a href="<?php echo esc_url(
                       $link_url
                     ); ?>" target="<?php echo esc_attr(

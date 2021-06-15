@@ -34,10 +34,62 @@
                     </a>
                 </div>
                 <div class="col-4 text-end">
-                    <a href="<?php echo home_url(); ?>" class="header__toggle">
+                    <a href="#menutoggle" class="header__toggle">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/menu.svg" alt="menu">
                     </a>
                 </div>
             </div>
         </div>
     </header>
+    <div class="header__menu text-center text-white">
+        <div class="container-fluid">
+            <div class="row header__menurow align-items-center">
+                <div class="col-12 header__menutop">
+                    <div class="row align-items-center">
+                        <div class="col-8 text-start">
+                            <a href="<?php echo home_url(); ?>" class="header__logo">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/fc-logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="col-4 text-end">
+                            <a href="#menutoggle" class="header__menuclose">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/close-icon.svg" alt="menu">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row header__menuinn align-items-center">
+                        <div class="col-12">
+                            <?php wp_nav_menu([
+                              'container_class' => '',
+                              'theme_location' => 'menu-1',
+                              'container' => '',
+                              'menu_class' => 'header__menulist',
+                            ]); ?>
+                        </div>
+                        <div class="col-12">
+                            <div class="header__widget">
+                                <?php the_field(
+                                  'footer_widget_1',
+                                  'options'
+                                ); ?>
+                            </div>
+                            <div class="footer__form">
+                                <?php echo do_shortcode(
+                                  '[contact-form-7 id="248" title="Footer form"]'
+                                ); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 header__menufooter">
+                    <p>
+                        <a href="#" target="_blank">Instagram @forestcooperage</a>
+                        <span>|</span>
+                        <a href="#" target="_blank">Facebook @forestcooperage</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>

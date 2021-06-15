@@ -77,15 +77,25 @@ h3 {
   }
 }
 .padd {
+  &__mdt {
+    padding-top: calc(2rem + 5vw);
+  }
+  &__mdb {
+    padding-bottom: calc(2rem + 5vw);
+  }
+  &__md {
+    padding-top: calc(2rem + 5vw);
+    padding-bottom: calc(2rem + 5vw);
+  }
   &__lgt {
-    padding-top: calc(4rem + 10vw);
+    padding-top: calc(3rem + 7.5vw);
   }
   &__lgb {
-    padding-bottom: calc(4rem + 10vw);
+    padding-bottom: calc(3rem + 7.5vw);
   }
   &__lg {
-    padding-top: calc(4rem + 10vw);
-    padding-bottom: calc(4rem + 10vw);
+    padding-top: calc(3rem + 7.5vw);
+    padding-bottom: calc(3rem + 7.5vw);
   }
 }
 .btton {
@@ -105,10 +115,8 @@ h3 {
   border: 2px solid $primary;
   border-radius: 5rem;
   letter-spacing: 0.05rem;
-  padding-top: calc(1rem + 0.8vw);
-  padding-bottom: calc(1rem + 0.8vw);
-  padding-left: calc(1.5rem + 1.5vw);
-  padding-right: calc(3.75rem + 2.5vw);
+  padding: calc(0.75rem + 0.5vw) calc(3rem + 2vw) calc(0.75rem + 0.5vw)
+    calc(1.5rem + 1.5vw);
   position: relative;
   &:after {
     content: "";
@@ -116,8 +124,8 @@ h3 {
     right: 15%;
     top: 56%;
     transform: translateY(-50%);
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.35rem;
+    height: 1.35rem;
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$light}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
     background-size: contain;
     background-position: center;
@@ -230,6 +238,18 @@ body {
   }
 }
 
+.screen-reader-text {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 @include media-breakpoint-up(md) {
   .btn {
     font-size: 1.25rem;
@@ -242,11 +262,6 @@ body {
   li {
     font-size: 1.125rem;
   }
-
-  .btn {
-    font-size: 1.5rem;
-    padding: 1.75rem 5.875rem 1.75rem 2.75rem;
-  }
 }
 
 @include media-breakpoint-up(xl) {
@@ -255,7 +270,12 @@ body {
     font-size: 1.25rem;
   }
 
+  .btn {
+    padding: 1.25rem 4.35rem 1.25rem 2.5rem;
+    font-size: 1.35rem;
+  }
   .btton {
-    padding: 1.75rem 5.875rem 1.75rem 2.75rem;
+    padding: 1.25rem 4.35rem 1.25rem 2.5rem;
+    font-size: 1.35rem;
   }
 }
