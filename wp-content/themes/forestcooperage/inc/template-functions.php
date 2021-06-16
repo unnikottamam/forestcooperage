@@ -99,6 +99,21 @@ function wds_gutenberg_assets()
   );
 }
 add_action('enqueue_block_editor_assets', 'wds_gutenberg_assets');
+add_action('admin_head', 'my_custom_styles');
+
+function my_custom_styles()
+{
+  echo '<style>
+  [data-aos^=fade][data-aos^=fade] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+[data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 1 !important;
+  transform: none !important;
+}
+  </style>';
+}
 
 // Load More Funtion
 function my_load_more_scripts()

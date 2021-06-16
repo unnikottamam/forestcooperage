@@ -60,6 +60,26 @@ function my_acf_init_block_types()
     ]);
 
     acf_register_block_type([
+      'name' => 'product-image-slider',
+      'title' => __('Product Image Slider'),
+      'description' => __('Product Image Slider block.'),
+      'render_template' => 'template-parts/blocks/product-image-slider.php',
+      'category' => 'layout ',
+      'icon' => 'format-image',
+      'keywords' => ['product-image-slider'],
+    ]);
+
+    acf_register_block_type([
+      'name' => 'side-image-gallery',
+      'title' => __('Side Image Gallery'),
+      'description' => __('Side image gallery block.'),
+      'render_template' => 'template-parts/blocks/side-image-gallery.php',
+      'category' => 'layout ',
+      'icon' => 'format-image',
+      'keywords' => ['side-image-gallery'],
+    ]);
+
+    acf_register_block_type([
       'name' => 'content-section',
       'title' => __('Content Area'),
       'description' => __('Content Area block.'),

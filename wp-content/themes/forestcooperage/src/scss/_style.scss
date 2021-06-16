@@ -118,6 +118,9 @@ h3 {
   padding: calc(0.75rem + 0.5vw) calc(3rem + 2vw) calc(0.75rem + 0.5vw)
     calc(1.5rem + 1.5vw);
   position: relative;
+  z-index: 5;
+  overflow: hidden;
+  @include transition;
   &:after {
     content: "";
     position: absolute;
@@ -130,6 +133,23 @@ h3 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    @include transition;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    content: "";
+    opacity: 0.25;
+    background: $brown;
+    transform-origin: right center;
+    transform: translateX(-110%) scaleY(1.5);
+    @include transition;
+    border-radius: 5rem;
+    transition-duration: 1s;
   }
   &:hover {
     color: $light;
@@ -137,6 +157,11 @@ h3 {
     border-color: $success;
     &:after {
       background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$light}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
+      transform: translate(0.75rem, -50%);
+    }
+    &:before {
+      transform-origin: left center;
+      transform: translateX(110%) scaleY(1.5);
     }
   }
   &-light {

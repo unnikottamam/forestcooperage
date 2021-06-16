@@ -61,10 +61,10 @@ if ($testi) {
     <div class="container">
         <div class="row">
             <div data-aos="fade-left" class="col-6 text-end">
-                <a href="#">@forestcooperage</a>
+                <a href="https://www.instagram.com/forestcooperage/" target="_blank">@forestcooperage</a>
             </div>
             <div data-aos="fade-right" class="col-6">
-                <a href="#">#forestcooperage</a>
+                <a href="https://www.facebook.com/Forestcooperage/" target="_blank">#forestcooperage</a>
             </div>
         </div>
     </div>

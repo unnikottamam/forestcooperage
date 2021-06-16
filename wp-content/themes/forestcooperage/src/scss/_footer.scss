@@ -7,6 +7,19 @@
   position: relative;
   z-index: 99;
   border-top: 2px solid $primary;
+  &:before {
+    content: "";
+    background-image: url("../images/bg-icon.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    top: -8px;
+    right: 7vw;
+    background-size: contain;
+    width: 81px;
+    height: 21px;
+    position: absolute;
+    transform: rotate(180deg);
+  }
   &:after {
     z-index: 9;
     content: "";
@@ -48,6 +61,20 @@
     position: relative;
     padding: calc(2rem + 3.75vw) 0;
     margin-bottom: 1px;
+    border-top: 2px solid $primary;
+    &:before {
+      content: "";
+      background-image: url("../images/bg-icon.svg");
+      background-position: 50%;
+      background-repeat: no-repeat;
+      top: -8px;
+      left: 7vw;
+      background-size: contain;
+      width: 81px;
+      height: 21px;
+      position: absolute;
+      transform: rotate(180deg);
+    }
   }
   &__testiside {
     position: absolute;

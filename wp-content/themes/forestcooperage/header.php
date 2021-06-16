@@ -85,9 +85,11 @@
                 </div>
                 <div class="col-12 header__menufooter">
                     <p>
-                        <a href="#" target="_blank">Instagram @forestcooperage</a>
+                        <a href="https://www.instagram.com/forestcooperage/" target="_blank">Instagram
+                            @forestcooperage</a>
                         <span>|</span>
-                        <a href="#" target="_blank">Facebook @forestcooperage</a>
+                        <a href="https://www.facebook.com/Forestcooperage/" target="_blank">Facebook
+                            @forestcooperage</a>
                     </p>
                 </div>
             </div>

@@ -39,11 +39,13 @@ if (!empty($block['className'])) {
                     <?php the_field('contents'); ?>
                 </div>
                 <div data-aos="fade-up" class="productlist__item active">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/fc-sauna.png" alt="product">
                     <div class="productlist__cont">
-                        <p>Sauna Product Description. Lorem ipsum dolor sit
-                            consectetur adipiscing elit, sed do eiusmod
-                            incididunt ut labore et dolore magna aliqua. </p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/fc-sauna.png" alt="product">
+                        <div class="productlist__continn">
+                            <p>Sauna Product Description. Lorem ipsum dolor sit
+                                consectetur adipiscing elit, sed do eiusmod
+                                incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
                         <a href="#">
                             View Product
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -55,11 +57,13 @@ if (!empty($block['className'])) {
                     <h2>Sauna</h2>
                 </div>
                 <div data-aos="fade-up" class="productlist__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/fc-tub.png" alt="product">
                     <div class="productlist__cont">
-                        <p>Sauna Product Description. Lorem ipsum dolor sit
-                            consectetur adipiscing elit, sed do eiusmod
-                            incididunt ut labore et dolore magna aliqua. </p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/fc-tub.png" alt="product">
+                        <div class="productlist__continn">
+                            <p>Sauna Product Description. Lorem ipsum dolor sit
+                                consectetur adipiscing elit, sed do eiusmod
+                                incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
                         <a href="#">
                             View Product
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 16 16">
@@ -71,11 +75,13 @@ if (!empty($block['className'])) {
                     <h2>Hot Tub</h2>
                 </div>
                 <div data-aos="fade-up" class="productlist__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/fc-cistern.png" alt="product">
                     <div class="productlist__cont">
-                        <p>Sauna Product Description. Lorem ipsum dolor sit
-                            consectetur adipiscing elit, sed do eiusmod
-                            incididunt ut labore et dolore magna aliqua. </p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/fc-cistern.png" alt="product">
+                        <div class="productlist__continn">
+                            <p>Sauna Product Description. Lorem ipsum dolor sit
+                                consectetur adipiscing elit, sed do eiusmod
+                                incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
                         <a href="#">
                             View Product
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 16 16">
@@ -87,11 +93,13 @@ if (!empty($block['className'])) {
                     <h2>Cistern</h2>
                 </div>
                 <div data-aos="fade-up" class="productlist__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/fc-tub-2.png" alt="product">
                     <div class="productlist__cont">
-                        <p>Sauna Product Description. Lorem ipsum dolor sit
-                            consectetur adipiscing elit, sed do eiusmod
-                            incididunt ut labore et dolore magna aliqua. </p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/fc-tub-2.png" alt="product">
+                        <div class="productlist__continn">
+                            <p>Sauna Product Description. Lorem ipsum dolor sit
+                                consectetur adipiscing elit, sed do eiusmod
+                                incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
                         <a href="#">
                             View Product
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 16 16">

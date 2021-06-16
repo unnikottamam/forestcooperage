@@ -25,21 +25,6 @@ $(document).ready(function () {
     dots: true,
   });
 
-  $(".productlist__item").on("click", function (e) {
-    e.preventDefault();
-    if (!$(this).hasClass("active")) {
-      $(".productlist__item").removeClass("active");
-      $(this).addClass("active");
-    }
-  });
-  $(".productlist__item").on("mouseenter", function (e) {
-    e.preventDefault();
-    if (!$(this).hasClass("active")) {
-      $(".productlist__item").removeClass("active");
-      $(this).addClass("active");
-    }
-  });
-
   $(".faqsec__inn h3").on("click", function (e) {
     e.preventDefault();
     if ($(this).parents(".faqsec__item").hasClass("active")) {
