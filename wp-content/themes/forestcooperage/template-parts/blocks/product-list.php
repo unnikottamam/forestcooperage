@@ -32,25 +32,25 @@ if (!empty($block['className'])) {
     </div>
     <div class="container">
         <div class="row justify-content-center text-center">
-            <div class="col-md-3 col-6 productlists__item">
+            <div data-aos="fade-up" class="col-md-3 col-6 productlists__item">
                 <a href="#">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/sauna.svg" alt="product">
                     sauna
                 </a>
             </div>
-            <div class="col-md-3 col-6 productlists__item">
+            <div data-aos="fade-up" class="col-md-3 col-6 productlists__item">
                 <a href="#">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/hot-tub.svg" alt="product">
                     hot tub
                 </a>
             </div>
-            <div class="col-md-3 col-6 productlists__item">
+            <div data-aos="fade-up" class="col-md-3 col-6 productlists__item">
                 <a href="#">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/cistern.svg" alt="product">
                     cistern
                 </a>
             </div>
-            <div class="col-md-3 col-6 productlists__item">
+            <div data-aos="fade-up" class="col-md-3 col-6 productlists__item">
                 <a href="#">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/soaker-tub.svg" alt="product">
                     soaker tub

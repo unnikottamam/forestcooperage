@@ -18,8 +18,8 @@ if (!empty($block['className'])) {
 }
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr(
-  $className
-); ?>">
+<section data-aos="fade-up" id="<?php echo esc_attr(
+  $id
+); ?>" class="<?php echo esc_attr($className); ?>">
     <?php the_field('map_iframe'); ?>
 </section>

@@ -40,7 +40,7 @@ $faq_size = get_field('faq_size') ? get_field('faq_size') : 'full';
                 $count++;
                 the_row();
                 ?>
-            <div class="col-lg-<?php echo $faq_size == 'half'
+            <div data-aos="fade-up" class="col-lg-<?php echo $faq_size == 'half'
               ? '6'
               : '12'; ?> faqsec__item <?php if ($count == 1) {
    echo 'active';

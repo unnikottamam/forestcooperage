@@ -11,7 +11,9 @@ $post_class = "padd__lgb post__thumb ";
 $count = $args['class'] ? $args['class'] : '';
 $post_class .= $count == 0 ? 'even' : 'odd';
 ?>
-<section id="post-<?php the_ID(); ?>" <?php post_class($post_class); ?>>
+<section data-aos="fade-up" id="post-<?php the_ID(); ?>" <?php post_class(
+  $post_class
+); ?>>
     <a href="<?php the_permalink(); ?>">
         <div class="container">
             <div class="row <?php echo $count == 0
@@ -32,7 +34,8 @@ $post_class .= $count == 0 ? 'even' : 'odd';
                           '...'
                         ); ?>
                     </p>
-                    <span class="btton btton-<?php echo $count == 0
+                    <span data-aos="fade-up" class="btton btton-<?php echo $count ==
+                    0
                       ? 'primary'
                       : 'success'; ?>">Read More</span>
                 </div>

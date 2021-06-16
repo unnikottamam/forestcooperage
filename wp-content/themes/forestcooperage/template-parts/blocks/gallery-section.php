@@ -39,7 +39,7 @@ if (!empty($block['className'])) {
             if ($images) {
               foreach ($images as $image) { ?>
             <div class="col-md-4 col-6 gallerysec__item">
-                <a data-fancybox="gallery" data-type="image" data-caption="<?php echo $image[
+                <a data-aos="fade-up" data-fancybox="gallery" data-type="image" data-caption="<?php echo $image[
                   'alt'
                 ]; ?>" href="<?php echo esc_url($image['url']); ?>">
                     <?php echo wp_get_attachment_image($image['id'], $size); ?>

@@ -34,10 +34,10 @@ if (!empty($block['className'])) {
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div data-aos="fade-up" class="col-lg-6">
                 <?php the_field('contents_one'); ?>
             </div>
-            <div class="col-lg-6">
+            <div data-aos="fade-up" class="col-lg-6">
                 <?php the_field('contents_two'); ?>
             </div>
             <div class="col-lg-7 col-xl-6 text-center">
@@ -54,7 +54,7 @@ if (!empty($block['className'])) {
                         ? $link['target']
                         : '_self';
                       ?>
-                <li>
+                <li data-aos="fade-up">
                     <a href="<?php echo esc_url(
                       $link_url
                     ); ?>" target="<?php echo esc_attr(

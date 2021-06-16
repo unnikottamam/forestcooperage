@@ -41,7 +41,8 @@ $media_size = get_field('media_size') ? get_field('media_size') : 'full';
                   $file = get_sub_field('file');
                   $file_url = $file['url'];
                   ?>
-            <div class="col-lg-<?php echo $media_size == 'half'
+            <div data-aos="fade-up" class="col-lg-<?php echo $media_size ==
+            'half'
               ? '6'
               : '12'; ?> mediasec__item <?php if ($count == 1) {
    echo 'active';

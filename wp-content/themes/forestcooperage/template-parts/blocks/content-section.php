@@ -47,7 +47,7 @@ echo $padd_class;
     </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="<?php echo $boxclass; ?>">
+            <div data-aos="fade-up" class="<?php echo $boxclass; ?>">
                 <?php
                 the_field('contents');
                 if (have_rows('buttons')) {
@@ -63,7 +63,7 @@ echo $padd_class;
                         ? $link['target']
                         : '_self';
                       ?>
-                <li>
+                <li data-aos="fade-up">
                     <a href="<?php echo esc_url(
                       $link_url
                     ); ?>" target="<?php echo esc_attr(

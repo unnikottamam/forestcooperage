@@ -55,6 +55,11 @@
     height: calc(3vw + 3rem);
     bottom: calc(-3vw - 3rem);
   }
+  .row {
+    > div {
+      padding-top: 3rem;
+    }
+  }
 }
 
 .sideimage {
@@ -288,6 +293,11 @@
 
 .instasec {
   display: flex;
+  &__img {
+    flex: 0 0 auto;
+    width: 25%;
+    max-width: 100%;
+  }
   a {
     height: 100%;
     display: block;

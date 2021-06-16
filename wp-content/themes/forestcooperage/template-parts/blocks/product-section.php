@@ -35,8 +35,10 @@ if (!empty($block['className'])) {
     <div class="container">
         <div class="row justify-content-center productlist__row">
             <div class="col-xl-6 col-lg-8 col-md-10">
-                <?php the_field('contents'); ?>
-                <div class="productlist__item active">
+                <div data-aos="fade-up">
+                    <?php the_field('contents'); ?>
+                </div>
+                <div data-aos="fade-up" class="productlist__item active">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/fc-sauna.png" alt="product">
                     <div class="productlist__cont">
                         <p>Sauna Product Description. Lorem ipsum dolor sit
@@ -44,7 +46,7 @@ if (!empty($block['className'])) {
                             incididunt ut labore et dolore magna aliqua. </p>
                         <a href="#">
                             View Product
-                            <svg xmlns="http://www.w3.org/2000/svg viewBox=" 0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                                 <path
                                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>
@@ -52,7 +54,7 @@ if (!empty($block['className'])) {
                     </div>
                     <h2>Sauna</h2>
                 </div>
-                <div class="productlist__item">
+                <div data-aos="fade-up" class="productlist__item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/fc-tub.png" alt="product">
                     <div class="productlist__cont">
                         <p>Sauna Product Description. Lorem ipsum dolor sit
@@ -60,7 +62,7 @@ if (!empty($block['className'])) {
                             incididunt ut labore et dolore magna aliqua. </p>
                         <a href="#">
                             View Product
-                            <svg xmlns="http://www.w3.org/2000/svg viewBox=" 0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 16 16">
                                 <path
                                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>
@@ -68,7 +70,7 @@ if (!empty($block['className'])) {
                     </div>
                     <h2>Hot Tub</h2>
                 </div>
-                <div class="productlist__item">
+                <div data-aos="fade-up" class="productlist__item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/fc-cistern.png" alt="product">
                     <div class="productlist__cont">
                         <p>Sauna Product Description. Lorem ipsum dolor sit
@@ -76,7 +78,7 @@ if (!empty($block['className'])) {
                             incididunt ut labore et dolore magna aliqua. </p>
                         <a href="#">
                             View Product
-                            <svg xmlns="http://www.w3.org/2000/svg viewBox=" 0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 16 16">
                                 <path
                                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>
@@ -84,7 +86,7 @@ if (!empty($block['className'])) {
                     </div>
                     <h2>Cistern</h2>
                 </div>
-                <div class="productlist__item">
+                <div data-aos="fade-up" class="productlist__item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/fc-tub-2.png" alt="product">
                     <div class="productlist__cont">
                         <p>Sauna Product Description. Lorem ipsum dolor sit
@@ -92,7 +94,7 @@ if (!empty($block['className'])) {
                             incididunt ut labore et dolore magna aliqua. </p>
                         <a href="#">
                             View Product
-                            <svg xmlns="http://www.w3.org/2000/svg viewBox=" 0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0 16 16">
                                 <path
                                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                             </svg>

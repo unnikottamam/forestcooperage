@@ -18,9 +18,11 @@ if (!empty($block['className'])) {
 }
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr(
-  $className
-); ?>" <?php echo get_field('bg_color')
+<section data-aos="fade-up" id="<?php echo esc_attr(
+  $id
+); ?>" class="<?php echo esc_attr($className); ?>" <?php echo get_field(
+  'bg_color'
+)
   ? 'style="background-color: ' . get_field('bg_color') . ';"'
   : ''; ?>>
     <?php if (get_field('image')) {

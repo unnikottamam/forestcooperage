@@ -24,7 +24,7 @@ if (have_rows('gallery')) { ?>
   $className
 ); ?> padd__lgb">
     <div class="container">
-        <div class="sidegallery__slider">
+        <div data-aos="fade-up" class="sidegallery__slider">
             <?php while (have_rows('gallery')) {
               the_row(); ?>
             <div class="sidegallery__slide">

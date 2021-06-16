@@ -34,7 +34,7 @@ if (!empty($block['className'])) {
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-xl-6 text-center text-lg-start">
+            <div data-aos="fade-up" class="col-lg-7 col-xl-6 text-center text-lg-start">
                 <?php the_field('contents'); ?>
             </div>
         </div>
@@ -53,7 +53,7 @@ if (!empty($block['className'])) {
                         ? $link['target']
                         : '_self';
                       ?>
-                <li>
+                <li data-aos="fade-up">
                     <a href="<?php echo esc_url(
                       $link_url
                     ); ?>" target="<?php echo esc_attr(
@@ -69,10 +69,10 @@ if (!empty($block['className'])) {
                 } ?>
             </div>
             <div class="col-lg-8 col-xl-7 contactsec__right">
-                <div class="text-lg-end text-center">
+                <div data-aos="fade-up" class="text-lg-end text-center">
                     <p><em>Send us a message, we’re on standby.</em></p>
                 </div>
-                <div class="contactsec__form text-white">
+                <div data-aos="fade-up" class="contactsec__form text-white">
                     <?php echo do_shortcode(
                       '[contact-form-7 id="131" title="Contact form"]'
                     ); ?>

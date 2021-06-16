@@ -36,11 +36,13 @@ $imgpos = get_field('image_position') ? get_field('image_position') : 'left';
     </div>
     <div class="container">
         <div class="row justify-content-between align-items-center">
-            <div class="col-lg-4 col-xl-5 pb-2 pb-lg-0 text-center <?php if (
-              $imgpos == 'right'
-            ) {
-              echo 'order-lg-2';
-            } ?>">
+            <div data-aos="fade-<?php echo $imgpos == 'right'
+              ? 'right'
+              : 'left'; ?>" class="col-lg-4 col-xl-5 pb-2 pb-lg-0 text-center <?php if (
+  $imgpos == 'right'
+) {
+  echo 'order-lg-2';
+} ?>">
                 <?php if (get_field('image')) {
                   echo wp_get_attachment_image(
                     get_field('image')['id'],
@@ -48,7 +50,9 @@ $imgpos = get_field('image_position') ? get_field('image_position') : 'left';
                   );
                 } ?>
             </div>
-            <div class="col-lg-7 col-xl-6 text-center text-lg-start">
+            <div data-aos="fade-<?php echo $imgpos == 'right'
+              ? 'left'
+              : 'right'; ?>" class="col-lg-7 col-xl-6 text-center text-lg-start">
                 <?php
                 the_field('contents');
                 if (have_rows('buttons')) {
@@ -64,7 +68,7 @@ $imgpos = get_field('image_position') ? get_field('image_position') : 'left';
                         ? $link['target']
                         : '_self';
                       ?>
-                <li>
+                <li data-aos="fade-up">
                     <a href="<?php echo esc_url(
                       $link_url
                     ); ?>" target="<?php echo esc_attr(
