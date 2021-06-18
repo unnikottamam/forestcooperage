@@ -9,7 +9,6 @@
 ?>
 
 <main id="post-<?php the_ID(); ?>" <?php post_class('blog__main'); ?>>
-
     <section class="coverbg banner text-white">
         <div class="coverbg__img <?php echo has_post_thumbnail()
           ? 'hasbg'

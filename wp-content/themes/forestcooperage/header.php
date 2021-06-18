@@ -95,3 +95,14 @@
             </div>
         </div>
     </div>
+    <?php if (
+      is_404() ||
+      is_search() ||
+      is_cart() ||
+      is_checkout() ||
+      is_product() ||
+      is_account_page() ||
+      is_wc_endpoint_url()
+    ) {
+      get_template_part('template-parts/content', 'banner');
+    } ?>

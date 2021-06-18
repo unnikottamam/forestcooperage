@@ -587,6 +587,17 @@
   }
 }
 
+.searchform {
+  button {
+    margin-top: 1rem;
+  }
+  .form-control {
+    :not(:focus) {
+      border-color: $black_15;
+    }
+  }
+}
+
 @include media-breakpoint-up(md) {
   .banner {
     .row {

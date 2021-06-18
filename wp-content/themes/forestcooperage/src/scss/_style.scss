@@ -68,6 +68,21 @@ h3 {
       background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='#{$primary}'><path fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z'/></svg>");
     }
   }
+  &-close {
+    width: 3.25rem;
+    height: 2.45rem;
+    color: $black;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg viewBox='0 0 16 16' fill='#{svg-color($secondary)}' xmlns='http://www.w3.org/2000/svg'><path d='M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z' /></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+    border: 0;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 .form {
   &-control {

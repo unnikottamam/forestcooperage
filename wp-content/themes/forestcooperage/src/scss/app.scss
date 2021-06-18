@@ -36,6 +36,7 @@ $utilities: map-merge(
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/tables";
 
 // Helpers
 @import "~bootstrap/scss/helpers/stretched-link";
@@ -57,3 +58,5 @@ $utilities: map-merge(
 @import "./sections";
 @import "./blog";
 @import "./footer";
+@import "./select2";
+@import "./woomodules";

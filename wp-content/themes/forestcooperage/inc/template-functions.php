@@ -172,3 +172,21 @@ function my_wp_nav_menu_objects($items, $args)
   }
   return $items;
 }
+
+// Search Form Widget
+function search_form_widget($form)
+{
+  $form =
+    '<div class="searchform">
+        <form action="' .
+    home_url('/') .
+    '" method="get">
+            <input class="form-control" type="text" name="s" id="search" value="' .
+    get_search_query() .
+    '" placeholder="Type here ..." />
+            <button type="submit" class="btton btton-primary">Search</button>
+        </form>
+    </div>';
+  return $form;
+}
+add_filter('get_search_form', 'search_form_widget');
